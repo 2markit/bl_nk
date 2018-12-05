@@ -1,4 +1,4 @@
-* {
+section *, nav * {
   font-family: "Montserrat", sans-serif !important;
 }
 
@@ -13,6 +13,30 @@ body {
   overflow-x: hidden;
 }
 
+/* width */
+::-webkit-scrollbar {
+  display: none;
+  width: 10px;
+  float: right;
+  background: transparent !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent !important;
+  max-height: 2.5vh !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #222;
+}
+
 #logo {
   height: 60px;
   width: auto;
@@ -24,6 +48,10 @@ body {
 
 .hidden {
   display: none;
+}
+
+.hidden2 {
+  opacity: 0 !important;
 }
 
 .container {
@@ -57,11 +85,97 @@ h1 {
 
 .rightParagraph {
   max-width: 40vw;
-  height: 100vh;
+  height: 85vh;
   margin: 0 auto;
   margin-right: 1.5vw;
   padding: 30vh 7.5vh;
   vertical-align: middle;
+}
+
+.leftParagraph {
+  max-width: 40vw;
+  height: 85vh;
+  margin: 0 auto;
+  margin-left: 1.5vw;
+  padding: 30vh 7.5vh;
+  vertical-align: middle;
+}
+
+/** NAVIGATION **/
+.prev {
+  margin-left: 0;
+}
+
+.next {
+  display: none;
+  width: 60px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.icon-wrap {
+  position: relative;
+  z-index: 100;
+  margin: 0 auto;
+  width: inherit;
+  display: block;
+  padding: 5px;
+  background: transparent;
+  bottom: -5vh;
+}
+
+.icon-wrap img {
+  height: 32px;
+  width: 50px;
+  background: transparent;
+  margin: 0 auto;
+}
+
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  border: 5px solid #fff;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 3;
+  -webkit-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+}
+
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 11.35px;
+  top: 9.45px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+  background: #fff;
+}
+
+#return-to-top:hover i {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 19px;
 }
 
 /** SPLIT PANELS **/
@@ -91,15 +205,18 @@ h1 {
 
 /*Left Panel*/
 
-.leftPanel .frontLeft {
+.frontLeft,
+.backLeft {
   transform-origin: right center;
   position: absolute;
-}
-
-.leftPanel img {
   -webkit-box-shadow: -17px 9px 40px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -17px 9px 40px -6px rgba(0, 0, 0, 0.75);
   box-shadow: -17px 9px 40px -6px rgba(0, 0, 0, 0.75);
+}
+
+.frontLeft {
+  z-index: 4;
+  display: none;
 }
 
 .leftPanel {
@@ -136,8 +253,6 @@ h1 {
 
 .centerPanel {
   position: relative;
-  margin-left: 1vw;
-  margin-right: 1vw;
   background-color: #fff;
   z-index: 1;
 }
@@ -145,10 +260,12 @@ h1 {
 /*Right Panel*/
 
 #rightSide {
+  margin-right: 1.5vw;
   float: right;
 }
 
-.rightPanel .frontRight {
+.frontRight,
+.backRight {
   position: absolute;
   transform-origin: left center;
   overflow: hidden;
@@ -158,7 +275,9 @@ h1 {
   box-shadow: 17px 9px 40px -6px rgba(0, 0, 0, 0.75);
 }
 
-.rightPanel img {
+.frontRight {
+  z-index: 4;
+  display: none;
 }
 
 .rightPanel {
@@ -180,6 +299,9 @@ h1 {
   height: 100%;
   top: 0;
   left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*Right Panels*/
@@ -222,96 +344,69 @@ h1 {
     transform: rotateY(-194deg);
   }
 }
-.frontLeft {
+
+.leftAnim {
   -webkit-animation: frontLeft 1.2s;
 }
 
-.frontRight {
+.rightAnim {
   -webkit-animation: frontRight 1.2s;
 }
 
 .backLeft {
+  z-index: 5 !important;
   background: #fff;
-  transform: translateX(250px);
-  -webkit-animation: backLeft 1.2s;
-  opacity: 0 !important;
-  z-index: 0 !important;
 }
 
 .backRight {
+  z-index: 5 !important;
   background: #fff;
-  transform: translateX(-250px);
-  -webkit-animation: backRight 1.2s;
-  opacity: 0 !important;
-  z-index: 0 !important;
 }
 
 /**SECTION 1 **/
-#section1 {
+#section1 .frontLeft {
+  background-image: url('../img/section1[leftPanel].jpg');
 }
-#section1 div {
+#section1 .frontRight {
+  background-image: url('../img/section1[rightPanel].jpg');
 }
 
 /**SECTION 2 **/
-#section2 {
+#section2 .frontLeft {
+  background-image: url('../img/section2[leftPanel].jpg');
 }
-#subSection1 {
-  max-width: 45%;
-  margin-left: 50%;
-  position: relative;
-  top: 20vh;
-}
-#subSection2 {
-  max-width: 45%;
-  margin-left: 50%;
-  position: relative;
-  top: 30vh;
+#section2 .frontRight {
+  background-image: url('../img/section2[rightPanel].jpg');
 }
 
 /**SECTION 3 **/
-#section3 {
+#section3 .frontLeft {
+  background-image: url('../img/section1[leftPanel].jpg');
 }
-#section3 div {
-  max-width: 45%;
-  margin-right: 50%;
-  margin-left: 5%;
-  position: relative;
-  top: 40vh;
+#section3 .frontRight {
+  background-image: url('../img/section1[rightPanel].jpg');
 }
 
 /**SECTION 4**/
-#section4 {
+#section4 .frontLeft {
+  background-image: url('../img/section1[leftPanel].jpg');
 }
-#section4 div {
-  max-width: 45%;
-  margin: 0 auto;
-  position: relative;
-  top: 40vh;
+#section4 .frontRight {
+  background-image: url('../img/section1[rightPanel].jpg');
 }
 
 /**SECTION 5 **/
-#section5 {
+#section5 .frontLeft {
+  background-image: url('../img/section1[leftPanel].jpg');
 }
-#section5 div {
-  max-width: 45%;
-  margin: 0 auto;
-  position: relative;
-  top: 40vh;
+#section5 .frontRight {
+  background-image: url('../img/section1[rightPanel].jpg');
 }
 
 /**SECTION 6 **/
 #section6 {
 }
-#section6 div {
-  max-width: 45%;
-  margin: 0 auto;
-  position: relative;
-  top: 40vh;
-}
 
 /**SECTION 7**/
 #section7 {
-  min-height: 67vh !important;
-  background-size: cover;
-  margin-top: -50px;
 }
