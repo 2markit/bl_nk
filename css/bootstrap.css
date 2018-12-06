@@ -3833,8 +3833,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
-  height: 72.5px;
+  height: 5vh;
   margin-bottom: 0px;
   border: 1px solid transparent;
 }
