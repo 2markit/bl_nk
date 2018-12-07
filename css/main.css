@@ -37,13 +37,45 @@ body {
   background: #222;
 }
 
+/** LOGO SVG STUFF **/
+
 #logo {
-  height: 4vh;
+  height: 4.5vh;
   width: auto;
   position: relative;
   display: block;
   margin: 0 auto;
-  margin-top: 0.75vh;
+  margin-top: 0.5vh;
+}
+
+#logo .st0 {
+  fill:#FFFFFF;
+}
+#logo .st1 {
+  fill:none;
+  stroke:#FFFFFF;
+  stroke-width:4.4179;
+  stroke-miterlimit:10;
+}
+
+#logoLanding {
+  height: 30vh;
+  padding-top: 20vh;
+  width: auto;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5vh;
+}
+
+#logoLanding .st0 {
+  fill:#000;
+}
+#logoLanding .st1 {
+  fill:none;
+  stroke:#000;
+  stroke-width:4.4179;
+  stroke-miterlimit:10;
 }
 
 .hidden {
@@ -54,8 +86,14 @@ body {
   opacity: 0 !important;
 }
 
-.container {
+.titleContainer {
+  border: solid 3px #000;
+  padding: 0 5px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: max-content;
 }
+
 
 .brandSection {
   min-height: 100vh !important;
@@ -65,22 +103,21 @@ body {
   margin-bottom: -21px;
 }
 
-#title {
-  color: #fff;
-  font-size: 45px !important;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 h1 {
   text-align: center;
-  margin-bottom: 25px;
+  margin: 0px;
+  font-size: 4.75rem;
 }
 
 .sectionText {
-  font-size: 18.5px !important;
+  font-size: 1.075em !important;
   text-align: center;
-  line-height: 27.5px;
+  line-height: 22.5px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .rightParagraph {
@@ -90,6 +127,11 @@ h1 {
   margin-right: 1.5vw;
   padding: 30vh 7.5vh;
   vertical-align: middle;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .leftParagraph {
@@ -99,6 +141,11 @@ h1 {
   margin-left: 1.5vw;
   padding: 30vh 7.5vh;
   vertical-align: middle;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /** NAVIGATION **/
@@ -117,16 +164,16 @@ h1 {
   position: relative;
   z-index: 100;
   margin: 0 auto;
-  width: inherit;
-  display: block;
-  padding: 5px;
+  width: 100%;
+  display: flex;
   background: transparent;
   bottom: -5vh;
 }
 
 .icon-wrap img {
-  height: 32px;
-  width: 50px;
+  height: 25px;
+  width: 38px;
+  display: flex;
   background: transparent;
   margin: 0 auto;
 }
@@ -145,10 +192,10 @@ h1 {
   border: 5px solid #fff;
   display: none;
   -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 3;
   -webkit-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
@@ -162,11 +209,11 @@ h1 {
   left: 11.35px;
   top: 9.45px;
   font-size: 19px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #return-to-top:hover {
@@ -298,6 +345,13 @@ h1 {
 
 /* Front, Back of brochure*/
 
+
+.frontRight,
+.frontLeft {
+  backface-visibility: hidden;
+}
+
+
 .frontRight,
 .frontLeft,
 .backRight,
@@ -355,11 +409,11 @@ h1 {
 }
 
 .leftAnim {
-  -webkit-animation: frontLeft 1.2s;
+  -webkit-animation: frontLeft 1s;
 }
 
 .rightAnim {
-  -webkit-animation: frontRight 1.2s;
+  -webkit-animation: frontRight 1s;
 }
 
 .backLeft {
@@ -370,6 +424,100 @@ h1 {
 .backRight {
   z-index: 5 !important;
   background: #fff;
+}
+
+
+    /*LOGO SHRINK ANIMATION*/
+
+@-webkit-keyframes headerShrink {
+  0% {
+    height: 100vh;
+    background-color: #fff;
+  }
+  70% {
+    height: 100vh;
+    background-color: #fff;
+  }
+  100% {
+    height: 5.5vh;
+    background-color: #000;
+  }
+}
+@-webkit-keyframes logoGrow {
+  0% {
+    height: 30vh;
+    padding-top: 20vh;
+  }
+  70% {
+    height: 30vh;
+    padding-top: 20vh;
+  }
+  100% {
+    height: 4vh;
+    padding-top: 0vh;
+  }
+}
+
+@-webkit-keyframes logoFade {
+  0% {
+    fill:#000;
+  }
+  70% {
+    fill:#000;
+  }
+  100% {
+    fill:#FFFFFF;
+  }
+}
+
+@-webkit-keyframes logoFade2 {
+  0% {
+    stroke:#000;
+  }
+  70% {
+    stroke:#000;
+  }
+  100% {
+    stroke:#FFFFFF;
+  }
+}
+
+@-webkit-keyframes logoFadeInit {
+  0% {
+    opacity:0;
+  }
+  70% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+.headerShrinkAnim {
+  -webkit-animation: headerShrink 4s;
+}
+
+.logoGrowAnim {
+  -webkit-animation: logoGrow 3s;
+}
+
+.logoFadeAnim {
+  -webkit-animation: logoFade 3s;
+}
+
+.logoFade2Anim {
+  -webkit-animation: logoFade2 3s;
+}
+
+.logoFadeInitAnim {
+  -webkit-animation: logoFadeInit 1s;
+}
+
+/**SECTION 0 **/
+#section1 {
+  background-color: #fff;
 }
 
 /**SECTION 1 **/
