@@ -37,7 +37,7 @@
     <a href="javascript:" id="return-to-top"
       ><i class="fa fa-chevron-up"></i
     ></a>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav id="navbarHeader" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="navbar-header">
         <a class="navbar-brand" href="home.html">
           <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 805.4 193.4">
@@ -55,7 +55,7 @@
     </nav>
 
     <!-- SECTION 1 -->
-    <section class="brandSection" id="section1">
+    <section class="brandSection hidden2" id="section1">
       <div class="splitPanels" id="leftSide">
         <div class="leftPanel">
           <figure class="backLeft"></figure>
@@ -73,6 +73,12 @@
           </figure>
         </div>
       </div>
+        <div id="mobilePanelLeft">
+          <figure class="mobileBackLeft"></figure>
+          <figure class="mobileFrontLeft">
+            <img src="img/section1[centerPanel].jpg" />
+          </figure>
+        </div>
       <div class="rightParagraph hidden">
         <div class="titleContainer"><h1>V_SION</h1></div>
         <p class="sectionText">
@@ -109,6 +115,12 @@
           </figure>
         </div>
       </div>
+        <div id="mobilePanelRight">
+          <figure class="mobileBackRight"></figure>
+          <figure class="mobileFrontRight">
+            <img src="img/section1[centerPanel].jpg" />
+          </figure>
+        </div>
       <div class="leftParagraph hidden">
         <div class="titleContainer"><h1>M_THOD</h1></div>
         <p class="sectionText">
@@ -250,7 +262,7 @@
         </div>
       </div>
       <div class="leftParagraph hidden">
-        <div class="titleContainer"><h1>SOCIAL M_DIA</h1></div>
+        <div class="titleContainer"><h1>S_CIALS</h1></div>
         <p class="sectionText">
           Let us create an easy to follow, researched backed social media
           marketing campaign. Through evidence based research, our Social Media team can create a
@@ -261,7 +273,31 @@
         </p>
       </div>
     </section>
-    <footer><p>&copy; blank inc.</p></footer>
+    <section class="footerSection" id="footer">
+        <div class="footerInfo">
+          <p id="blankName">Blank Inc. </p>
+          <p>Vancouver, B.C.</p>
+          <p class="contact-email" >info@blank.inc</p>
+          <p class="²markit">Powered by ²markit</p>
+        </div>
+        <div class="wrapperSocials">
+          <div class="socials">
+            <a href="https://www.instagram.com/604weekend">
+              <img src="img/instagram[white].svg" />
+              </a>
+            </div>
+            <div class="socials">
+              <a href="https://www.youtube.com/channel/UCwyuN8OfVB6XgC_RK_kmGxw">
+                <img src="img/youtube[white].svg" />
+              </a>
+          </div>
+            <div class="socials">
+              <a href="https://www.facebook.com/604WEEKEND/">
+                <img src="img/facebook[white].svg" />
+              </a>
+          </div>
+        </div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
   </body>

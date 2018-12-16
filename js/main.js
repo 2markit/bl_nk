@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  section1Panels();
+  logoFadeInit();
+  setTimeout(section1Panels, 3000);
 });
 
 // ===== Scroll to Top ====
@@ -22,36 +23,34 @@ $("#return-to-top").click(function() {
     section1Panels();
 });
 
-// LOGO HEADER SHRINK animation
-
-function logoFade() {
-  $("#logo .st0").addClass("logoFadeAnim").css({"fill": "#fff"});
-  $("#logo .st1").addClass("logoFade2Anim").css({"stroke": "#fff"});
-};
-
-
+              //      LOGO HEADER SHRINK animation
 
 function logoFadeInit() {
-  $("#logo").addClass("logoFadeInitAnim");
-  setTimeout(headerShrink, 2000);
-  setTimeout(logoFade, 3000);
-
+  $("#logo").animate({opacity: "1"}, 1000);
+  setTimeout(headerShrink, 1800);
 };
-
 
 function headerShrink() {
-  $(".navbar").addClass("headerShrinkAnim").css({"height": "5.5vh","backgroundColor": "#000"});
-  $("#logo").addClass("logoGrowAnim").animate({paddingTop: "0vh", height: "4vh"});
+  $("#navbarHeader").animate({height: "5.5vh"}, 1200);
+  $("#logo").animate({marginTop: "0.5vh", height: "4.5vh"}, 1200);
+  $("#logo .st0").addClass("logoFadeAnim").css({"fill": "#fff"});
+  $("#logo .st1").addClass("logoFade2Anim").css({"stroke": "#fff"});
+  $("#navbarHeader").addClass("headerFadeAnim").css({"backgroundColor": "#000"});
 };
 
 
-// FIRST PANEL
+//   FIRST PANEL
 
 function section1Panels() {
+  $("#section1").removeClass("hidden2");
   $("#section1 .frontLeft").fadeIn("fast").addClass("leftAnim");
+  $("#section1 .mobileFrontLeft").fadeIn("fast").addClass("leftAnim");
   $("#section1 .frontRight").fadeIn("fast").addClass("rightAnim");
+  $("#section1 .mobileFrontRight").fadeIn("fast").addClass("rightAnim");
   $("#section1 .backLeft").addClass("leftAnim").delay(200).fadeOut("fast");
+  $("#section1 .mobileBackLeft").addClass("leftAnim").delay(200).fadeOut("fast");
   $("#section1 .backRight").addClass("rightAnim").delay(200).fadeOut("fast");
+  $("#section1 .mobileBackRight").addClass("rightAnim").delay(200).fadeOut("fast");
   $("#section1 div").fadeIn("slow").removeClass("hidden");
   $("#section1 a").delay(800).fadeIn("slow");
 }
