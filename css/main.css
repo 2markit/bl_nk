@@ -131,7 +131,7 @@ body {
 .wrapperSocials {
   margin: 0 auto;
   margin-top: -6.5vh;
-  margin-left: 2vw;
+  margin-left: 5vw;
   height: 2.5vh;
   float: left;
 }
@@ -274,7 +274,7 @@ h1 {
 
 #return-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 27.5px;
   right: 20px;
   background: rgba(0, 0, 0, 0.8);
   width: 50px;
@@ -319,6 +319,58 @@ h1 {
   font-size: 19px;
 }
 
+/** CONTACT US BUTTON **/
+
+
+#contact-us {
+  position: fixed;
+  bottom: 27.5px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  border: 5px solid #fff;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+  -webkit-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 11px 31px -7px rgba(0, 0, 0, 0.75);
+}
+
+#contact-us i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 11px;
+  top: 11px;
+  font-size: 18px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#contact-us:hover {
+  background: #fff;
+}
+
+#contact-us:hover i {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+}
+
+
+
 /** SPLIT PANELS **/
 
 .splitPanels {
@@ -326,25 +378,8 @@ h1 {
   perspective: 2000px;
   max-width: 60vw;
   margin: 0 auto;
-  margin-top: 2.75vw;
-  transform: scale(0.9);
-}
-
-#leftSide {
-  margin-left: 0.5vw;
-  float: left;
-}
-
-.leftPanel,
-.rightPanel,
-.leftPanel figure, .rightPanel figure {
-  height: 80vh;
-  width: 15vw;
-}
-
-.leftPanel img, .rightPanel img {
-  height: 100%;
-  width: 100%;
+  margin-top: 4vw;
+  transform: scale(0.95);
 }
 
 /*Left Panel*/
@@ -386,20 +421,20 @@ h1 {
 
 
 #leftSide {
-  margin-left: 0.5vw;
+  margin-left: 1.5vw;
   float: left;
 }
 
 .leftPanel,
 .rightPanel,
 .leftPanel figure, .rightPanel figure {
-  height: 80vh;
-  width: 15vw;
+  height: calc(1500px / 2);
+  width: calc(480px / 2);
 }
 
 .leftPanel img, .rightPanel img {
-  height: 100%;
-  width: 100%;
+  height: calc(1500px / 2);
+  width: calc(480px / 2);
 }
 
 /*Center Panel*/
@@ -409,9 +444,8 @@ h1 {
   background-color: #fff;
   overflow-x: hidden;
   z-index: 1;
-  height: 80vh;
-  width: 33vw;
-  margin-left: 1vw;
+  height: calc(1500px / 2);
+  width: calc(1000px / 2);
   -webkit-box-shadow: 0px 28px 55px -23px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 28px 55px -23px rgba(0,0,0,0.75);
   box-shadow: 0px 28px 55px -23px rgba(0,0,0,0.75);
@@ -419,15 +453,15 @@ h1 {
 
 .centerPanel img {
   position: relative;
-  height: 100%;
-  width: 100%;
+  height: calc(1500px / 2);
+  width: calc(1000px / 2);
 }
 
 
 /*Right Panel*/
 
 #rightSide {
-  margin-right: 0.5vw;
+  margin-right: 1.5vw;
   float: right;
 }
 
@@ -751,6 +785,9 @@ h1 {
 
 /***************         MEDIA QUERIES       ***************/
 @media (max-width: 650px) {
+  #mobilePanelRight, #mobilePanelLeft {
+    display: none !important;
+  }
   #logo {
     height: 10vh;
     margin-top: 32.5vh;
