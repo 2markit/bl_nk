@@ -373,7 +373,7 @@ h1 {
 
 #contact-area {
 	display: none;
-	width: 550px;
+	width: 600px;
 	margin: 0 auto;
   padding: 2em;
   text-align: center;
@@ -385,28 +385,31 @@ h1 {
 	color: #fff;
 }
 
-#contact-area input, #contact-area textarea {
+#contact-area input, #contact-area select {
 	padding: 5px;
-	width: 471px;
+	width: 250px;
 	font-family: Helvetica, sans-serif;
 	font-size: 1.4em;
 	margin: 0px 0px 10px 0px;
-	border: 2px solid #ccc;
 	color: #000;
 }
 
 #contact-area textarea {
 	height: 90px;
+	padding: 5px;
+	width: 500px;
+	font-family: Helvetica, sans-serif;
+	font-size: 1.4em;
+	margin: 0 auto;
 	color: #000;
 }
 
 #contact-area textarea:focus, #contact-area input:focus {
-	border: 2px solid #900;
 	color: #000;
 }
 
 #contact-area input.submit-button {
-	width: 100px;
+	width: 200px;
 	margin: 0 auto;
 	color: #fff;
   background: #000;
