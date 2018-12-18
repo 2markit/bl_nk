@@ -31,9 +31,22 @@
 	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 
 	<!-- Contact Button -->
-	<a href="javascript:" id="contact-us">
-		<i class="fa fa-envelope" aria-hidden="true"></i>
-	</a>
+	<a href="javascript:" id="contact-us"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+
+		<!-- Contact Form -->
+	<div id="contact-area">
+	  <h2>Keep in touch!</h2>
+	  <p>We'll get back to you as quickly as possible</p>
+		<br />
+		<form method="post" action="contactengine.php">
+			<input placeholder="Name" type="text" name="Name" id="Name" />
+			<input placeholder="Email" type="text" name="Email" id="Email" />
+			<textarea placeholder="Message" name="Message" rows="20" cols="20" id="Message"></textarea>
+			<input type="submit" name="submit" value="Submit" class="submit-button" />
+    	<input class="submit-button" type="reset" />
+		</form>
+		<div style="clear: both;"></div>
+	</div>
 
 
 	<nav id="navbarHeader" class="navbar navbar-inverse navbar-fixed-top" role="navigation">

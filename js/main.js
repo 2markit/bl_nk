@@ -3,6 +3,25 @@ $(document).ready(function() {
   setTimeout(section1Panels, 3000);
 });
 
+
+$(function() {
+	// contact form animations
+	 $('#contact-us').click(function() {
+		 $('#contact-area').fadeToggle();
+	 })
+
+	$(document).mouseup(function (e) {
+	 var container = $('#contact-area');
+
+	 if (!container.is(e.target) // if the target of the click isn't the container...
+	     && container.has(e.target).length === 0) // ... nor a descendant of the container
+	 {
+	     container.fadeOut();
+	 }
+	});
+});
+
+
 // ===== Scroll to Top ====
 $(window).scroll(function() {
   if ($(this).scrollTop() >= 50) {
