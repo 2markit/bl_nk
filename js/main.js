@@ -60,11 +60,14 @@ function headerShrink() {
     height: '4.5vh',
   }, 1200);
   $('#logo .st0').addClass('logoFadeAnim').css({
-    'fill': '#fff',
+    'stroke': '#fff',
   });
   $('#logo .st1').addClass('logoFade2Anim').css({
     'stroke': '#fff',
   });
+	$('#logo .st2').addClass('logoFade3Anim').css({
+		'fill': '#fff',
+	});
   $('#navbarHeader').addClass('headerFadeAnim').css({
     'backgroundColor': '#000',
   });

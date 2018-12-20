@@ -55,13 +55,18 @@ body {
 }
 */
 #logo .st0 {
-  fill:#000;
+  fill:none;
+	stroke:#000000;
+	stroke-width:10;
+	stroke-miterlimit:10;
 }
 #logo .st1 {
-  fill:none;
-  stroke:#000;
-  stroke-width:4.4179;
-  stroke-miterlimit:10;
+  stroke:#000000;
+	stroke-width:2;
+	stroke-miterlimit:10;
+}
+#logo .st2 {
+  fill:#000000;
 }
 
 #logo {
@@ -763,13 +768,13 @@ h1 {
 
 @-webkit-keyframes logoFade {
   0% {
-    fill:#000;
+    stroke:#000;
   }
   70% {
-    fill:#000;
+    stroke:#000;
   }
   100% {
-    fill:#FFFFFF;
+    stroke:#FFFFFF;
   }
 }
 
@@ -785,6 +790,17 @@ h1 {
   }
 }
 
+@-webkit-keyframes logoFade3 {
+  0% {
+    fill:#000;
+  }
+  70% {
+    fill:#000;
+  }
+  100% {
+    fill:#FFFFFF;
+  }
+}
 
 .headerFadeAnim {
   -webkit-animation: headerFade 2s;
@@ -796,6 +812,10 @@ h1 {
 
 .logoFade2Anim {
   -webkit-animation: logoFade2 1.5s;
+}
+
+.logoFade3Anim {
+  -webkit-animation: logoFade3 1.5s;
 }
 
 /**SECTION 1 **/
