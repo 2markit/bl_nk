@@ -2,12 +2,13 @@ section *, nav * {
   font-family: "Montserrat", sans-serif !important;
 }
 
-html {
-  min-height: 100vh !important;
+html, body {
+  width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
 }
 
 body {
-  min-height: 100vh !important;
   overflow-x: hidden;
 }
 
@@ -91,10 +92,10 @@ body {
   border: solid 3px #000;
   padding: 0 5px;
   margin: 0 auto;
+  display: flex;
   margin-bottom: 20px;
   width: max-content;
 }
-
 
 .brandSection {
   min-height: 100vh !important;
@@ -173,7 +174,7 @@ h1 {
   height: 85vh;
   margin: 0 auto;
   margin-right: 0vw;
-  padding: 32vh 7.5vh 25vh 7.5vh;
+  padding: 28vh 7.5vh 25vh 7.5vh;
   vertical-align: middle;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s ease-in-out;
@@ -187,7 +188,7 @@ h1 {
   height: 85vh;
   margin: 0 auto;
   margin-left: 0vw;
-  padding: 32vh 7.5vh 25vh 7.5vh;
+  padding: 28vh 7.5vh 25vh 7.5vh;
   vertical-align: middle;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s ease-in-out;
@@ -236,8 +237,8 @@ h1 {
 
 @keyframes bounce {
   0%, 50%, 100% {
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
     will-change: transform;
   }
   25%, 75% {
@@ -384,7 +385,7 @@ h1 {
   text-align: center;
   left: 33%;
   top: 30%;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   background: #000;
 	color: #fff;
@@ -574,115 +575,56 @@ h1 {
 
 
 
-/*MOBILE*/   /*Left Panel*/
-#mobilePanelLeft , #mobilePanelRight {
-    margin-bottom: -85vh;
+/*MOBILE*/
+.mobilePanel {
+	height: 30vh;
+	padding-top: 9.5vh;
 }
 
-
-.mobileFrontLeft,
-.mobileBackLeft {
-  transform-origin: right center;
-  position: absolute;
-  overflow: hidden;
-  -webkit-box-shadow: -17px 9px 40px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -17px 9px 40px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: -17px 9px 40px -6px rgba(0, 0, 0, 0.75);
+.logoBg{
+	margin: 0 auto;
+	padding-top: 1.5vh;
+	display: block;
+	height: 8.5vh;
 }
 
-.mobileFrontLeft {
-  z-index: 4;
-  display: none;
-}
-
-.mobileBackLeft {
-}
-
-#mobilePanelLeft {
-  transform-style: preserve-3d;
-  transform-origin: right center;
-  position: relative;
-  margin-left: 0;
-  background: #fff;
-  z-index: 4;
-}
-
-#mobilePanelLeft:active {
-  transform-style: preserve-3d;
-  transform-origin: right center;
-  position: relative;
-  margin-left: 0vw;
-  background: #fff;
-}
-
-
-#mobilePanelLeft,
-#mobilePanelRight,
-#mobilePanelLeft figure, #mobilePanelRight figure {
-  height: 85vh;
+.mobileTitleContainer {
+  margin: 0 auto;
   width: 100vw;
-  box-shadow: none !important;
+  height: 10vh;
+	background-color: rgba(255, 255, 255, 0.47);
 }
 
-#mobilePanelLeft img, #mobilePanelRight img {
-  height: 100%;
-  width: 100%;
+#mobileSect1 {
+	background-image: url('../img/vision-bg.jpg');
+	background-position: center;
+	background-size: cover;
 }
-
-
-/*MOBILE*/   /*Right Panel*/
-.mobileFrontRight,
-.mobileBackRight {
-  position: absolute;
-  transform-origin: left center;
-  overflow: hidden;
-  -webkit-box-shadow: 17px 9px 40px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 17px 9px 40px -6px rgba(0, 0, 0, 0.75);
-  box-shadow: 17px 9px 40px -6px rgba(0, 0, 0, 0.75);
+#mobileSect2 {
+	background-image: url('../img/method-bg.jpg');
+	background-position: center;
+	background-size: cover;
 }
-
-.mobileFrontRight {
-  z-index: 4;
-  display: none;
+#mobileSect3 {
+	background-image: url('../img/branding-bg.jpg');
+	background-position: center;
+	background-size: cover;
 }
-
-.mobileBackRight {
+#mobileSect4 {
+	background-image: url('../img/marketing-bg.jpg');
+	background-position: center;
+	background-size: cover;
 }
-
-#mobilePanelRight {
-  transform-style: preserve-3d;
-  position: relative;
-  background: #fff;
-  z-index: 4;
+#mobileSect5 {
+	background-image: url('../img/production-bg.jpg');
+	background-position: center;
+	background-size: cover;
 }
-
-/* Front, Back of brochure*/
-
-
-.mobileFrontRight,
-.mobileFrontLeft {
-  backface-visibility: hidden;
+#mobileSect6 {
+	background-image: url('../img/socials-bg.jpg');
+	background-position: center;
+	background-size: cover;
 }
-
-
-.mobileFrontRight,
-.mobileFrontLeft ,
-.mobileBackRight,
-.mobileBackLeft  {
-  position: absolute;
-  /*backface-visibility: hidden;*/
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-
-
 
 /*Right Panels*/
 @-webkit-keyframes frontRight {
@@ -820,7 +762,7 @@ h1 {
 
 /**SECTION 1 **/
 #section1 {
-  margin-top: 3.9vh;
+  margin-top: 5.5vh;
 }
 
 /**SECTION 2 **/
@@ -849,10 +791,82 @@ h1 {
 
 
 /***************         MEDIA QUERIES       ***************/
+@media (max-width: 320px) {
+	#contact-us, #return-to-top {
+    width: 40px;
+    height: 40px;
+	}
+
+	#contact-us i {
+		left: 7.5px;
+    top: 6px;
+    font-size: 16px;
+	}
+	#return-to-top i {
+		left: 7.35px;
+    top: 6px;
+    font-size: 18px;
+	}
+	.sectionText {
+		font-size: 1em !important;
+	}
+}
 @media (max-width: 650px) {
-  #mobilePanelRight, #mobilePanelLeft {
-    display: none !important;
+	#section6 {
+    min-height: 85vh !important;
+	}
+.icon-wrap {
+	bottom: -13vh !important;
+}
+	#logo {
+		margin-top: 0.75vh !important;
+	  height: 5.5vh !important;
+	}
+	#navbarHeader {
+		height: 7vh !important;
+	}
+	#contact-area {
+    width: 95vw;
+    margin: 0 auto;
+    padding: 1em;
+    /* left: 33%; */
+    top: 12vw;
+		left: 2.5vw;
+	}
+	#contact-area textarea {
+		width: 75vw;
+    font-size: 1.2em;
+	}
+	#contact-area input, #contact-area select {
+    padding: 5px;
+    width: 75vw;
+    margin: 0 auto;
+    font-size: 1.2em;
+	}
+.form-control {
+    display: block;
+    width: 75vw;
+	}
+	.icon-wrap img {
+    height: 30px;
+    width: 30px;
+	}
+	.leftParagraph, .rightParagraph {
+    height: 42vh !important;
+	  float: none !important;
+    margin: 0 auto !important;
+    max-width: 100vw !important;
+    padding: 10vh 2vh 5vh 2vh !important;
+	}
+	.sectionText{
+    line-height: 22.5px !important;
+	}
+  #mobilePanel {
+    display: block !important;
   }
+	.titleContainer {
+		display: none !important;
+	}
   #logo {
     height: 10vh;
     margin-top: 32.5vh;
@@ -860,13 +874,6 @@ h1 {
 
   .splitPanels {
     display: none !important;
-  }
-
-  .leftParagraph, .rightParagraph {
-    float: none !important;
-    margin: 0 auto !important;
-    max-width: 100vw !important;
-    padding: 27.5vh 2.75vh !important;
   }
 
   .footerSection {
@@ -913,8 +920,34 @@ h1 {
   }
 }
 
+@media (min-width: 1075px) and (max-width: 1475px) {
+	.splitPanels {
+    max-width: 72vw;
+	  margin-top: 4vw;
+    margin-left: -10vw !important;
+	  transform: scale(0.65);
+	}
+	.rightParagraph, .leftParagraph {
+		max-width: 41vw;
+    padding: 28vh 7.5vh 25vh 0vh;
+	}
+}
+
+@media (min-width: 1475px) and (max-width: 1650px) {
+	.splitPanels {
+    max-width: 72vw;
+	  margin-top: 4vw;
+    margin-left: -4vw !important;
+	  transform: scale(0.8);
+	}
+	.rightParagraph, .leftParagraph {
+	  max-width: 42vw;
+	  padding: 28vh 7.5vh 25vh 5vh;
+	}
+}
+
 @media (min-width: 650px) {
-  #mobilePanelRight, #mobilePanelLeft {
+  .mobilePanel {
     display: none !important;
   }
 }
