@@ -70,7 +70,7 @@ body {
 }
 
 .brandSection {
-  min-height: 100vh !important;
+  min-height: 99vh !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -831,7 +831,7 @@ h1 {
     padding-top: 12.5vh;
 	}
 	.icon-wrap {
-		bottom: -10vh !important;
+		bottom: -3vh !important;
 	}
 
 	.footerSection {
