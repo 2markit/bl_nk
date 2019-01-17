@@ -23,6 +23,7 @@ body {
   height: 100vh;
   background-color: #fff;
   border: none !important;
+	z-index: 998;
 }
 
 #logo .st0 {
@@ -48,6 +49,7 @@ body {
   display: block;
   margin: 0 auto;
   margin-top: 32.5vh;
+	z-index: 999;
 }
 
 .hidden {
@@ -166,13 +168,38 @@ h1 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.alt-btn {
+	-webkit-transition: ease-in-out 0.35s ease-in-out;
+	-moz-transition: ease-in-out 0.35s ease-in-out;
+	-ms-transition: ease-in-out 0.35s ease-in-out;
+	-o-transition: ease-in-out 0.35s ease-in-out;
+	transition: ease-in-out 0.35s ease-in-out;
+	height: 30px;
+	padding: 0 30px;
+	text-align: center;
+	line-height: 31px;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	background-color: transparent;
+	border: 1px solid #000;
+	cursor: pointer;
+	box-sizing: border-box;
+	border-radius: 0;
+	margin: 0 auto;
+	bottom: -6vh;
+	color: #000;
+	position: relative;
+	display: flex;
+	z-index: 1;
+}
 
 /** NAVIGATION **/
 .spinner {
   width: 100%;
   height: inherit;
   position: relative;
-  display: flex;
 }
 .spinner:after, .spinner:before {
   content: "";
@@ -762,6 +789,9 @@ h1 {
 /***************         MEDIA QUERIES       ***************/
 /* SMALL PHONES */
 @media (max-width: 320px) {
+	#section6 {
+    min-height: 96vh !important;
+	}
 	#contact-us, #return-to-top {
     width: 40px;
     height: 40px;
@@ -803,6 +833,14 @@ h1 {
 	.icon-wrap {
 		bottom: -10vh !important;
 	}
+
+	.footerSection {
+	  height: 25vh !important;
+	}
+
+	.wrapperSocials {
+	    margin: 5vh 0 0.5vh 0 !important;;
+	}
 }
 
 /* STUPID PHONES */
@@ -818,14 +856,12 @@ h1 {
 /* LARGE PHONES */
 @media (max-width: 750px) {
 	#section6 {
-	  min-height: 85vh !important;
+    min-height: 85vh;
 	}
 	.icon-wrap {
-		bottom: -10vh;
+		bottom: -8vh;
 	}
 	#logo {
-		margin-top: 0.75vh !important;
-	  height: 5.5vh !important;
 	}
 	#navbarHeader {
 		height: 7vh !important;
@@ -835,7 +871,7 @@ h1 {
     margin: 0 auto;
     padding: 1em;
     /* left: 33%; */
-    top: 12vw;
+    top: 13vw;
 		left: 2.5vw;
 	}
 	#contact-area textarea {
@@ -865,6 +901,7 @@ h1 {
 	}
 	.sectionText{
     line-height: 22.5px;
+    min-height: 30vh;
 	}
   #mobilePanel {
     display: block !important;
@@ -884,7 +921,7 @@ h1 {
   .footerSection {
     font-size: .85em !important;
     line-height: 5px !important;
-    height: 19vh !important;
+    height: 19vh;
   }
 
   .footerInfo {

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  disableScroll();
   logoFadeInit();
   setTimeout(section1Panels, 3000);
 });
@@ -7,21 +8,78 @@ var navbarHeader = $('#navbarHeader');
 
 //      contact form animations
 $(function() {
-	 $('#contact-us').click(function() {
-		 $('#contact-area').fadeToggle();
-	 })
+  $('#contact-us').click(function() {
+    $('#contact-area').fadeToggle();
+  });
 
-	$(document).mouseup(function (e) {
-	 var container = $('#contact-area');
-
-	 if (!container.is(e.target) // if the target of the click isn't the container...
-	     && container.has(e.target).length === 0) // ... nor a descendant of the container
-	 {
-	     container.fadeOut();
-	 }
-	});
+  $(document).mouseup(function(e) {
+    var container = $('#contact-area');
+ // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target)&&container.has(e.target).length === 0)
+    {
+      container.fadeOut();
+    }
+  });
 });
 
+$(function() {
+  $('#btm-btn').click(function() {
+    $('#contact-area').fadeToggle();
+  });
+
+  $(document).mouseup(function(e) {
+    var container = $('#contact-area');
+
+ // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target)&&container.has(e.target).length === 0)
+    {
+      container.fadeOut();
+    }
+  });
+});
+
+// Prevent Scrolling
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = {
+  37: 1,
+  38: 1,
+  39: 1,
+  40: 1
+};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+    e.preventDefault();
+  e.returnValue = false;
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+    window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove = preventDefault; // mobile
+  document.onkeydown = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+  if (window.removeEventListener)
+    window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.onmousewheel = document.onmousewheel = null;
+  window.onwheel = null;
+  window.ontouchmove = null;
+  document.onkeydown = null;
+}
 
 //      ===== Scroll to Top ====
 $(window).scroll(function() {
@@ -55,11 +113,11 @@ function logoFadeInit() {
 
 function headerShrink() {
   $('#navbarHeader').animate({
-    height: '5.5vh',
+    height: '6.75vh',
   }, 1200);
   $('#logo').animate({
-    marginTop: '0.5vh',
-    height: '4.5vh',
+    marginTop: '1vh',
+    height: '5vh',
   }, 1200);
   $('#logo .st0').addClass('logoFadeAnim').css({
     'stroke': '#fff',
@@ -67,9 +125,9 @@ function headerShrink() {
   $('#logo .st1').addClass('logoFade2Anim').css({
     'stroke': '#fff',
   });
-	$('#logo .st2').addClass('logoFade3Anim').css({
-		'fill': '#fff',
-	});
+  $('#logo .st2').addClass('logoFade3Anim').css({
+    'fill': '#fff',
+  });
   $('#navbarHeader').addClass('headerFadeAnim').css({
     'backgroundColor': '#000',
   });
@@ -96,12 +154,13 @@ function section1Panels() {
 //   Next Button
 $('#section1 a').click(function() {
   $('html, body').animate({
-      scrollTop: $('#section2').offset().top - (navbarHeader.height()),
+      scrollTop: $('#section2').offset().top - (navbarHeader.height()*1.75),
     },
     1000
   );
   $('#section1 a').fadeOut(500);
   setTimeout(section2Panels, 250);
+  enableScroll();
 });
 
 
