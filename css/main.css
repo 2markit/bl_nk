@@ -841,6 +841,10 @@ h1 {
 	.wrapperSocials {
 	    margin: 5vh 0 0.5vh 0 !important;;
 	}
+
+	.alt-btn {		
+    font-size: 1.25rem;
+	}
 }
 
 /* STUPID PHONES */
