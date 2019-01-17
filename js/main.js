@@ -154,7 +154,7 @@ function section1Panels() {
 //   Next Button
 $('#section1 a').click(function() {
   $('html, body').animate({
-      scrollTop: $('#section2').offset().top - (navbarHeader.height()*1.75),
+      scrollTop: $('#section2').offset().top - (navbarHeader.height()),
     },
     1000
   );
