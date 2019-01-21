@@ -3,8 +3,6 @@ $(document).ready(function() {
   logoFadeInit();
   setTimeout(section1Panels, 3000);
 });
-// Set Variable for header
-var navbarHeader = $('#navbarHeader');
 
 //      contact form animations
 $(function() {
@@ -113,7 +111,7 @@ function logoFadeInit() {
 
 function headerShrink() {
   $('#navbarHeader').animate({
-    height: '6.75vh',
+    height: '7vh',
   }, 1200);
   $('#logo').animate({
     marginTop: '1vh',
@@ -147,20 +145,33 @@ function section1Panels() {
   $('#section1 .backRight').addClass('rightAnim').delay(200).fadeOut('fast');
   $('#section1 .mobileBackRight').addClass('rightAnim').delay(200).fadeOut('fast');
   $('#section1 div').fadeIn('slow').removeClass('hidden');
-  $('#section1 a').delay(800).fadeIn('slow');
+  $('#section1 #arrow').delay(800).fadeIn('slow');
 }
 
 
 //   Next Button
-$('#section1 a').click(function() {
+$('#section1 #arrow').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
   $('html, body').animate({
       scrollTop: $('#section2').offset().top - (navbarHeader.height()),
     },
     1000
   );
-  $('#section1 a').fadeOut(500);
+  $('#section1 #arrow').fadeOut(500);
   setTimeout(section2Panels, 250);
-  enableScroll();
+});
+
+//  Mobile Next Button
+$('#section1 #arrowMobile').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
+  $('html, body').animate({
+      scrollTop: $('#mobileSect2').offset().top - (navbarHeader.height() - 1),
+    },
+    1000
+  );
+  setTimeout(section2Panels, 250);
 });
 
 
@@ -172,19 +183,32 @@ function section2Panels() {
   $('#section2 .backLeft').addClass('leftAnim').delay(275).fadeOut('fast');
   $('#section2 .backRight').addClass('rightAnim').delay(275).fadeOut('fast');
   $('#section2 div').fadeIn('slow').removeClass('hidden2 hidden');
-  $('#section2 a').delay(800).fadeIn('slow');
+  $('#section2 #arrow').delay(800).fadeIn('slow');
 }
 
 
 //   Next Button
-$('#section2 a').click(function() {
+$('#section2 #arrow').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
   $('html, body').animate({
       scrollTop: $('#section3').offset().top - (navbarHeader.height()),
     },
     1000
   );
-  $('#section2 a').fadeOut(500);
+  $('#section2 #arrow').fadeOut(500);
+  setTimeout(section3Panels, 250);
+});
 
+//  Mobile Next Button
+$('#section2 #arrowMobile').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
+  $('html, body').animate({
+      scrollTop: $('#mobileSect3').offset().top - (navbarHeader.height()),
+    },
+    1000
+  );
   setTimeout(section3Panels, 250);
 });
 
@@ -197,19 +221,32 @@ function section3Panels() {
   $('#section3 .backLeft').addClass('leftAnim').delay(275).fadeOut('fast');
   $('#section3 .backRight').addClass('rightAnim').delay(275).fadeOut('fast');
   $('#section3 div').fadeIn('slow').removeClass('hidden2 hidden');
-  $('#section3 a').delay(800).fadeIn('slow');
+  $('#section3 #arrow').delay(800).fadeIn('slow');
 }
 
 
 //   Next Button
-$('#section3 a').click(function() {
+$('#section3 #arrow').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
   $('html, body').animate({
       scrollTop: $('#section4').offset().top - (navbarHeader.height()),
     },
     1000
   );
-  $('#section3 a').fadeOut(500);
+  $('#section3 #arrow').fadeOut(500);
+  setTimeout(section4Panels, 250);
+});
 
+//  Mobile Next Button
+$('#section3 #arrowMobile').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
+  $('html, body').animate({
+      scrollTop: $('#mobileSect4').offset().top - (navbarHeader.height()),
+    },
+    1000
+  );
   setTimeout(section4Panels, 250);
 });
 
@@ -221,22 +258,34 @@ function section4Panels() {
   $('#section4 .backLeft').addClass('leftAnim').delay(200).fadeOut('fast');
   $('#section4 .backRight').addClass('rightAnim').delay(200).fadeOut('fast');
   $('#section4 div').fadeIn('slow').removeClass('hidden2 hidden');
-  $('#section4 a').delay(800).fadeIn('slow');
+  $('#section4 #arrow').delay(800).fadeIn('slow');
 }
 
 
 //   Next Button
-$('#section4 a').click(function() {
+$('#section4 #arrow').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
   $('html, body').animate({
       scrollTop: $('#section5').offset().top - (navbarHeader.height()),
     },
     1000
   );
-  $('#section4 a').fadeOut(500);
-
+  $('#section4 #arrow').fadeOut(500);
   setTimeout(section5Panels, 250);
 });
 
+//   Next Button
+$('#section4 #arrowMobile').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
+  $('html, body').animate({
+      scrollTop: $('#section5').offset().top - (navbarHeader.height()),
+    },
+    1000
+  );
+  setTimeout(section5Panels, 250);
+});
 
 //   FIFTH PANEL
 function section5Panels() {
@@ -246,22 +295,38 @@ function section5Panels() {
   $('#section5 .backLeft').addClass('leftAnim').delay(200).fadeOut('fast');
   $('#section5 .backRight').addClass('rightAnim').delay(200).fadeOut('fast');
   $('#section5 div').fadeIn('slow').removeClass('hidden2 hidden');
-  $('#section5 a').delay(800).fadeIn('slow');
+  $('#section5 #arrow').delay(800).fadeIn('slow');
 }
 
 
 //   Next Button
-$('#section5 a').click(function() {
+$('#section5 #arrow').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
   $('html, body').animate({
       scrollTop: $('#section6').offset().top - (navbarHeader.height()),
     },
     1000
   );
-  $('#section5 a').fadeOut(500);
+  $('#section5 #arrow').fadeOut(500);
 
   setTimeout(section6Panels, 250);
+  enableScroll();
 });
 
+
+//   Next Button
+$('#section5 #arrowMobile').click(function() {
+// Set Variable for header
+var navbarHeader = $('#navbarHeader');
+  $('html, body').animate({
+      scrollTop: $('#section6').offset().top - (navbarHeader.height()),
+    },
+    1000
+  );
+  setTimeout(section6Panels, 250);
+  enableScroll();
+});
 
 //   SIXTH PANEL
 function section6Panels() {
@@ -273,14 +338,3 @@ function section6Panels() {
   $('#section6 div').fadeIn('slow').removeClass('hidden2 hidden');
   $('#section6 a').delay(800).fadeIn('slow');
 }
-
-
-//   Next Button
-$('#section6 a').click(function() {
-  $('html, body').animate({
-      scrollTop: $('#section7').offset().top - (navbarHeader.height()),
-    },
-    1000
-  );
-  $('#section6 a').fadeOut(500);
-});

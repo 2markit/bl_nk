@@ -8,10 +8,21 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title></title>
-	<meta name="description" content="" />
+	<meta name="designer" content="²markit Consulting, B.C., Canada" />
+	<title>Blank Inc.</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="keywords" content="creative, creativity, creative, marketing, design, development, graphic, designer, ui/ux, strategy, vancouver, bc">
+	<link rel="canonical" href="https://blankinc.design">
+	<meta property="og:title" content="Blank Inc.">
+	<meta property="og:type" content="website">
+	<meta name="description" content="Start your blank slate!" />
+	<meta property="og:description" content="Start your blank slate!">
+	<meta property="og:image" content="https://blankinc.design/img/blank.canvas.png">
+	<meta property="og:url" content="https://blankinc.design/index.html">
+	<meta name="google-site-verification" content="-XTmFbx5tHimD-edDtObQwCeogEa0JdfULHMMGGDWeM" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css" />
@@ -38,19 +49,19 @@
 		<h2>Keep in touch!</h2>
 		<p>We'll get back to you as quickly as possible</p>
 		<br />
-		<form id="contact-form" method="post" action="contact.php" role="form">
+		<form id="contact-form" action="https://formspree.io/jakemckenzie19@gmail.com" method="POST">
 			<div class="messages"></div>
 			<div class="controls">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
-							<input id="form_name" type="text" name="name" class="form-control" placeholder="Firstname" required="required" data-error="Firstname is required.">
+							<input id="name" type="text" name="name" class="form-control" placeholder="Firstname" required="required" data-error="Firstname is required.">
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
-							<input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Lastname" required="required" data-error="Lastname is required.">
+							<input id="surname" type="text" name="name" class="form-control" placeholder="Lastname" required="required" data-error="Lastname is required.">
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
@@ -58,7 +69,7 @@
 				<div class="row">
 					<div class="col-md-6">
 						<div class="form-group">
-							<input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="required" data-error="Valid email is required.">
+							<input id="email" type="email" name="_replyto" class="form-control" placeholder="Email" required="required" data-error="Valid email is required.">
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
@@ -78,12 +89,12 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<label for="form_message">Please leave us a message</label>
-							<textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+							<textarea id="message" name="name" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
 					<div class="col-md-12">
-						<input type="submit" class="submit-button" value="Send message">
+						<input id="submit" type="submit" class="submit-button" value="Send message">
 					</div>
 				</div>
 				<div class="row">
@@ -134,10 +145,9 @@
 				</figure>
 			</div>
 		</div>
-		<!-- TODO:  Add proper Logo [Vision]-->
 		<div class="mobilePanel" id="mobileSect1">
 		<div class="mobileTitleContainer">
-				<img class="logoBg" src="img/br_nding.svg" />
+				<img class="logoBg" src="img/v_sion.svg" />
 		</div>
 		</div>
 		<div class="rightParagraph hidden">
@@ -154,6 +164,9 @@
 		</div>
 		<div class="spinner spinner-5">
 			<a id="arrow" class="next" href="#">
+				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
+			</a>
+			<a id="arrowMobile" class="next" href="#">
 				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
 			</a>
 		</div>
@@ -195,6 +208,9 @@
 		</div>
 		<div class="spinner spinner-5">
 			<a id="arrow" class="next" href="#">
+				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
+			</a>
+			<a id="arrowMobile" class="next" href="#">
 				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
 			</a>
 		</div>
@@ -239,6 +255,9 @@
 			<a id="arrow" class="next" href="#">
 				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
 			</a>
+			<a id="arrowMobile" class="next" href="#">
+				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
+			</a>
 		</div>
 	</section>
 
@@ -281,6 +300,9 @@
 			<a id="arrow" class="next" href="#">
 				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
 			</a>
+			<a id="arrowMobile" class="next" href="#">
+				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
+			</a>
 		</div>
 	</section>
 
@@ -303,10 +325,9 @@
 				</figure>
 			</div>
 		</div>
-		<!-- TODO:  Add proper Logo [Production]-->
 		<div class="mobilePanel" id="mobileSect5">
 		<div class="mobileTitleContainer">
-				<img class="logoBg" src="img/br_nding.svg" />
+				<img class="logoBg" src="img/pr_duction.svg" />
 		</div>
 		</div>
 		<div class="rightParagraph hidden">
@@ -323,6 +344,9 @@
 		</div>
 		<div class="spinner spinner-5">
 			<a id="arrow" class="next" href="#">
+				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
+			</a>
+			<a id="arrowMobile" class="next" href="#">
 				<span class="icon-wrap"> <img src="img/arrow.svg" /> </span>
 			</a>
 		</div>
@@ -347,10 +371,9 @@
 				</figure>
 			</div>
 		</div>
-		<!-- TODO:  Add proper Logo [Socials]-->
 		<div class="mobilePanel" id="mobileSect6">
 		<div class="mobileTitleContainer">
-				<img class="logoBg" src="img/br_nding.svg" />
+				<img class="logoBg" src="img/s_cials.svg" />
 		</div>
 		</div>
 		<div class="leftParagraph hidden">
@@ -366,6 +389,7 @@
 				multiple social media sites.
 			</p>
 		</div>
+		<br style="clear: both">
 		<button id="btm-btn" class="alt-btn">Start your blank canvas!</button>
 	</section>
 	<section class="footerSection" id="footer">
@@ -393,9 +417,12 @@
 			</div>
 		</div>
 	</section>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="js/contact.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
+	<script src="js/contact.js"></script>
 </body>
 
 </html>

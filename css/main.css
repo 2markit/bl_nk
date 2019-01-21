@@ -70,7 +70,7 @@ body {
 }
 
 .brandSection {
-  min-height: 99vh !important;
+  min-height: 100vh !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -185,7 +185,6 @@ h1 {
 	background-color: transparent;
 	border: 1px solid #000;
 	cursor: pointer;
-	box-sizing: border-box;
 	border-radius: 0;
 	margin: 0 auto;
 	bottom: -6vh;
@@ -216,6 +215,11 @@ h1 {
 .spinner-5 span:nth-child(1) {
   -webkit-animation: bounce 2.65s ease-in-out infinite;
   animation: bounce 2.65s ease-in-out infinite;
+}
+
+
+#arrowMobile {
+	display: none !important;
 }
 
 @-webkit-keyframes bounce {
@@ -260,10 +264,9 @@ h1 {
   position: relative;
   z-index: 100;
   margin: 0 auto;
-  width: 100%;
+  width: 50%;
   display: flex;
   background: transparent;
-  bottom: -1vh;
 }
 
 .icon-wrap img {
@@ -588,7 +591,7 @@ h1 {
   margin: 0 auto;
   width: 100vw;
   height: 10vh;
-	background-color: rgba(255, 255, 255, 0.47);
+	background-color: rgba(255, 255, 255, 0.50);
 }
 
 #mobileSect1 {
@@ -758,7 +761,7 @@ h1 {
 
 /**SECTION 1 **/
 #section1 {
-  margin-top: 5.5vh;
+  margin-top: 7vh;
 }
 
 /**SECTION 2 **/
@@ -842,7 +845,7 @@ h1 {
 	    margin: 5vh 0 0.5vh 0 !important;;
 	}
 
-	.alt-btn {		
+	.alt-btn {
     font-size: 1.25rem;
 	}
 }
@@ -863,12 +866,9 @@ h1 {
     min-height: 85vh;
 	}
 	.icon-wrap {
-		bottom: -8vh;
+	  margin-bottom: -27.5px;;
 	}
 	#logo {
-	}
-	#navbarHeader {
-		height: 7vh !important;
 	}
 	#contact-area {
     width: 95vw;
@@ -925,7 +925,7 @@ h1 {
   .footerSection {
     font-size: .85em !important;
     line-height: 5px !important;
-    height: 19vh;
+    height: 19vh !important;
   }
 
   .footerInfo {
@@ -1232,8 +1232,20 @@ h1 {
 	}
 }
 
+@media (max-width: 1351px) {
+	#arrow {
+		display: none !important;
+	}
+	#arrowMobile {
+		display: block !important;
+	}
+}
+
 @media (min-width: 1351px) {
   .mobilePanel {
     display: none !important;
   }
+	#arrowMobile {
+		display: none !important;
+	}
 }
